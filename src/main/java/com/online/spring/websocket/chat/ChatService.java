@@ -27,9 +27,11 @@ public class ChatService {
 
     /**推送消息*/
     public void broadcast(String message) throws IOException {
-        for (WebSocketSession session : users.keySet()) {
-            session.sendMessage(new TextMessage(message));
-        }
+    		if(users != null) {
+	        for (WebSocketSession session : users.keySet()) {
+	            session.sendMessage(new TextMessage(message));
+	        }
+    		}
     }
 
     /**发布到redis*/
