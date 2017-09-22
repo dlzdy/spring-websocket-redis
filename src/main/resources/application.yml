@@ -1,0 +1,10 @@
+#Spring Boot配置
+
+server:
+  #端口
+  port: 8020
+  #IP
+  address: 0.0.0.0
+  sessionTimeout: 30
+  #服务名,"/"时用空字符串
+  contextPath: 
